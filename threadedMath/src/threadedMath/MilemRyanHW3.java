@@ -25,6 +25,9 @@ public class MilemRyanHW3
 		int number1;
 		int number2;
 		Thread subtractThread;
+		Thread adderThread;
+		Thread multiplierThread;
+		Thread dividerThread;
 		
 		while(true)
 		{
@@ -43,8 +46,14 @@ public class MilemRyanHW3
 			number2 = Integer.parseInt(input[1]);
 			
 			subtractThread = new Thread(new Subtractor(number1, number2));
+			adderThread = new Thread(new Adder(number1, number2));
+			multiplierThread = new Thread(new Multiplier(number1, number2));
+			dividerThread = new Thread(new Divider(number1, number2));
 			
 			subtractThread.start();
+			adderThread.start();
+			multiplierThread.start();
+			dividerThread.start();
 		}
 	}
 
