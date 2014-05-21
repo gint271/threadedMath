@@ -1,3 +1,13 @@
+/*
+ * Author: Ryan Milem
+ * 
+ * Homework Assignment 3
+ * 
+ * 5/21/14
+ * 
+ * Thread that adds two numbers.
+ */
+
 package threadedMath;
 
 public class Adder implements Runnable
