@@ -24,6 +24,7 @@ public class MilemRyanHW3
 		String split;
 		int number1;
 		int number2;
+		Thread subtractThread;
 		
 		while(true)
 		{
@@ -41,8 +42,9 @@ public class MilemRyanHW3
 			number1 = Integer.parseInt(input[0]);
 			number2 = Integer.parseInt(input[1]);
 			
-			System.out.println("Number 1 is " + number1);
-			System.out.println("Number 2 is " + number2);
+			subtractThread = new Thread(new Subtractor(number1, number2));
+			
+			subtractThread.start();
 		}
 	}
 
