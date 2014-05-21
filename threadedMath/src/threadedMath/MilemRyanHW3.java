@@ -54,6 +54,18 @@ public class MilemRyanHW3
 			adderThread.start();
 			multiplierThread.start();
 			dividerThread.start();
+			
+			try
+			{
+				subtractThread.join();
+				adderThread.join();
+				multiplierThread.join();
+				dividerThread.join();
+			}
+			catch (Exception e)
+			{
+				System.out.println("Couldn't wait for other threads.  CANT STOP THE PAIN TRAIN");
+			}
 		}
 	}
 
